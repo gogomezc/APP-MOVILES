@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  usuario: string="";
+  password: string="";
+  
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
 
+  goToDashboard(){
+    const nombreUsuario = this.usuario ? this.usuario: 'Invitado';
+    this.navCtrl.navigateForward(['/dashboard', { usuario: this.usuario }]);
+  }
 }

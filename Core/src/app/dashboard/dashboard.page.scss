@@ -77,3 +77,18 @@ ion-content {
     top: 10px;
     right: 10px;
   }
+  
+  ion-menu-button {
+    --color: var(--ion-color-primary, #0088ff); /* Color of the icon */
+    --icon-size: 24px; /* Size of the icon */
+    --padding-start: 0;
+    --padding-end: 0;
+    --margin-start: 0;
+    --margin-end: 0;
+  }
+
+  #contenido1 {
+    width: 75%;
+    margin-top: 50%;
+    align-items: center;
+  }

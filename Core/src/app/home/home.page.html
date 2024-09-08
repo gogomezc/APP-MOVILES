@@ -17,6 +17,7 @@
           class="inputIcon"
         ></ion-icon>
         <ion-input
+          [(ngModel)]="usuario"
           placeholder="Usuario"
           type="text"
           id="username"
@@ -31,6 +32,7 @@
           class="inputIcon"
         ></ion-icon>
         <ion-input
+          [(ngModel)]="password"
           placeholder="Contraseña"
           type="password"
           id="password"
@@ -41,7 +43,7 @@
       <div class="signupContainer ion-text-center">
         <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a>
 
-        <ion-button id="button"> Ingresar </ion-button>
+        <ion-button id="button" (click)="goToDashboard()"> Ingresar </ion-button>
       </div>
     </ion-card-content>
   </ion-card>
