@@ -1,0 +1,53 @@
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <ion-item routerLink="/nosotros">Nosotros</ion-item>
+      <ion-item routerLink="/dashboard">Dashboard</ion-item>
+      <ion-item routerLink="/home">Cerrar Sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="main-content" class="ion-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="first"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+      </ion-toolbar>
+      </ion-header>
+
+<ion-content>
+  <h1 style="text-align: center;">En esta sección puedes enviarnos tus sugerencias!</h1>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <form (ngSubmit)="onSubmit()">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input [(ngModel)]="contact.name" name="name" required placeholder="{{ usuario }}" disabled></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input [(ngModel)]="contact.email" name="email" type="email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Mensaje</ion-label>
+            <ion-textarea [(ngModel)]="contact.message" name="message" required></ion-textarea>
+          </ion-item>
+
+          <ion-button id="button" expand="full" type="submit">Enviar</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
