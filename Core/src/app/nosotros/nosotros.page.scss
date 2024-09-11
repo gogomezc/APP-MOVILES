@@ -1,0 +1,60 @@
+:host{
+    --ion-background-color: #ffffff; /* Fondo blanco ;D*/
+  }
+  
+  .logoduoc{ 
+    display: flex;
+    justify-content: center;
+
+  }
+  .logoduoc img{ /*cambiar parametros de la imagen duoc*/
+    width: 20rem; 
+    height: auto;
+    margin-block-start: 4rem;
+  }
+
+  .contenido-todo{ /*aqui esta todo el body en general*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+
+  
+  .tituloabajo{   /* me gusta usar mas px*/
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    font-size: 2.5rem; /* aqui ajustamos el tamaño del titulo "Nosotros"*/
+  }
+  
+  .personas-contenedor{ 
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .persona{ /* aqui tenemos la configuraciones tanto el fondo de cada carta*/
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .persona h2{ /*aqui arreglamos la letra y ect*/
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .persona p{
+    color: #666;
+  }
+  
