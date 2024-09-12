@@ -1,11 +1,39 @@
-<ion-header>
-    <ion-title class="logoduoc" >
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" 
-      alt="Logo_DuocUC">
-    </ion-title>
-</ion-header>
 
-<ion-content>
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <ion-item routerLink="/nosotros">Nosotros</ion-item>
+      <ion-item routerLink="/contacto">Contacto</ion-item>
+      <ion-item routerLink="/home">Cerrar Sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="main-content" class="ion-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+      </ion-toolbar>
+      </ion-header>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="heading">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+              alt="Logo"
+            />
+          </ion-card-title>
+        </ion-card-header>
+        </ion-card>
   <div class="contenido-todo">
     <h1 class="tituloabajo ">Nosotros</h1>
 
