@@ -1,17 +1,30 @@
 :host{
     --ion-background-color: #ffffff; /* Fondo blanco ;D*/
   }
+ 
   
-  .logoduoc{ 
-    display: flex;
-    justify-content: center;
+  ion-header {
+    background-color: transparent; /* Elimina cualquier fondo */
+}
 
-  }
-  .logoduoc img{ /*cambiar parametros de la imagen duoc*/
-    width: 20rem; 
-    height: auto;
-    margin-block-start: 4rem;
-  }
+.logoduoc {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
+}
+
+.img {
+    max-width: 100%; /* Para hacer que la imagen se ajuste al contenedor */
+    height: auto;    /* Mantén la proporción de la imagen */
+    position: static;
+}
+
+@media (max-width: 768px) {
+    .img {
+        width: 80%;  /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+    }
+}
 
   .contenido-todo{ /*aqui esta todo el body en general*/
     display: flex;
@@ -25,10 +38,11 @@
   
   .tituloabajo{   /* me gusta usar mas px*/
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 24px;
-    color: #333;
-    font-size: 2.5rem; /* aqui ajustamos el tamaño del titulo "Nosotros"*/
+    color: #131111;
+    font-size: 2.0rem; /* aqui ajustamos el tamaño del titulo "Nosotros"*/
+    margin-block-start: 20rem;
   }
   
   .personas-contenedor{ 
