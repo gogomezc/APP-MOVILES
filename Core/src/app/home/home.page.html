@@ -10,6 +10,7 @@
     </ion-card-header>
 
     <ion-card-content>
+      <!-- Input para usuario -->
       <ion-item class="inputContainer">
         <ion-icon
           slot="start"
@@ -25,6 +26,7 @@
         ></ion-input>
       </ion-item>
 
+      <!-- Input para contraseña -->
       <ion-item class="inputContainer">
         <ion-icon
           slot="start"
@@ -40,10 +42,15 @@
         ></ion-input>
       </ion-item>
 
+      <!-- Mensaje de error si los campos están vacíos o las credenciales son incorrectas -->
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+      <!-- Contenedor para los botones -->
       <div class="signupContainer ion-text-center">
         <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a>
 
-        <ion-button id="button" (click)="goToDashboard()"> Ingresar </ion-button>
+        <!-- Botón para ingresar, que llama a validateInputs() -->
+        <ion-button id="button" (click)="validateInputs()"> Ingresar </ion-button>
       </div>
     </ion-card-content>
   </ion-card>
