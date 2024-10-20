@@ -29,7 +29,7 @@ export class HomePage {
   // Método para autenticar y navegar al dashboard
   goToDashboard() {
     const credentials = {
-      correo: this.usuario,  // Asegúrate de que 'correo' sea el campo correcto en la API
+      correo: this.usuario,  
       password: this.password,
     };
 
@@ -41,15 +41,29 @@ export class HomePage {
         // Guarda el token en el almacenamiento si la autenticación es exitosa
         await this.authService.saveToken(response.auth.token);
 
-        // Navegar al dashboard con el nombre del usuario
-        const nombreUsuario = response.data.nombre_completo || 'Invitado';
-        this.navCtrl.navigateForward(['/dashboard', { usuario: nombreUsuario }]);
-      },
-      (error) => {
-        console.error('Error de autenticación:', error);
-        // Muestra un mensaje de error si la autenticación falla
-        this.errorMessage = 'Credenciales incorrectas. Intenta de nuevo.';
+
+
+        // Obtén el perfil del usuario desde la respuesta
+      const perfil = response.perfil;
+      const username = response.data.nombre_completo || 'Invitado';
+
+        // Navegar según el perfil del usuario
+      if (perfil === 'estudiante') {
+        // Navegar a la vista para estudiantes
+        this.navCtrl.navigateForward(['/dashboard', { usuario: username }]);
+      } else if (perfil === 'docente') {
+        // Navegar a la vista para profesores
+        this.navCtrl.navigateForward(['/nosotros', { usuario: username }]);
+      } else {
+        // Manejar otros perfiles o redirigir a una vista genérica
+        this.navCtrl.navigateForward(['/dashboard', { usuario: username }]);
       }
+    },
+    (error) => {
+      console.error('Error de autenticación:', error);
+      // Muestra un mensaje de error si la autenticación falla
+      this.errorMessage = 'Credenciales incorrectas. Intenta de nuevo.';
+    }
     );
   }
 }
