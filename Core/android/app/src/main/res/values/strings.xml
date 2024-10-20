@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">registrapp</string>
+    <string name="title_activity_main">registrapp</string>
+    <string name="package_name">com.registrapp.base</string>
+    <string name="custom_url_scheme">com.registrapp.base</string>
+</resources>

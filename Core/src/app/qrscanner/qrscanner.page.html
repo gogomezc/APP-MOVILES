@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>QR APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+
+
+<!-- Segmentos -->
+<ion-segment [(ngModel)]="segment">
+
+  <ion-segment-button value="scan">
+    <ion-label>Scan QR</ion-label>
+  </ion-segment-button>
+
+  <ion-segment-button value="generate">
+    <ion-label>Generate QR</ion-label>
+  </ion-segment-button>
+
+</ion-segment>
+
+<!-- Scan QR -->
+<div *ngIf="segment === 'scan'"class="segment">
+  <div class="segment-content">
+
+    <h6>Scan o selecciona una imagen de un QR para su valor</h6>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="startScan()" class="submit" expand="block" >
+          Scan
+          <ion-icon slot="end" name="scan-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="submit" expand="block" >
+          Selecciona
+          <ion-icon slot="end" name="image-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+      <ion-item class="result" *ngIf="scanResult" lines="none">
+        <ion-label>
+          <p>Resultado del scan</p>
+          <div>{{scanResult}}</div>
+        </ion-label>
+      </ion-item>
+
+
+  </div>
+</div>
+
+<!-- Generar QR -->
+<div class="segment" *ngIf="segment === 'generate'"> 
+  <div class="segment-content">
+    <div id="qrImage">
+      <div class="d-flex-center">
+        <div class="d-flex-center qr-wrapper">
+          <qr-code [value]="qrText"
+         size="190" 
+         errorCorrectionLevel="M" />
+        </div>
+
+      </div>
+      <div class="ion-padding-top">
+        {{qrText}}
+      </div>
+    </div>
+
+
+    <!-- Compartir QR -->
+     <ion-button (click)="captureScreen()" expand="block" class="submit ion-margin-top" >
+      Compartir
+      <ion-icon slot="end" name="share-social-outline"></ion-icon>
+     </ion-button>
+  </div>
+</div>
+
+</ion-content>

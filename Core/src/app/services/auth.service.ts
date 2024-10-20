@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Storage } from '@capacitor/storage';
+import { Preferences } from '@capacitor/preferences'; // Cambiado a Preferences
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -18,7 +18,7 @@ export class AuthService {
 
   // Método para guardar el token en el almacenamiento
   async saveToken(token: string) {
-    await Storage.set({
+    await Preferences.set({
       key: 'auth_token',
       value: token,
     });
@@ -26,12 +26,12 @@ export class AuthService {
 
   // Método para obtener el token almacenado
   async getToken(): Promise<string | null> {
-    const { value } = await Storage.get({ key: 'auth_token' });
+    const { value } = await Preferences.get({ key: 'auth_token' });
     return value;
   }
 
   // Método para eliminar el token (logout)
   async clearToken() {
-    await Storage.remove({ key: 'auth_token' });
+    await Preferences.remove({ key: 'auth_token' });
   }
 }
