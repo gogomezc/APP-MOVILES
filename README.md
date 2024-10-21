@@ -1,4 +1,4 @@
-Para usar-->
+Para usar--> Asegurarse de al clonar el repositorio, descargar los node modules (VSC generalmente salta con una notificacion)
 1. git clone https://github.com/gogomezc/APP-MOVILES
 2. Ubicarse en Core
 3. npm install
