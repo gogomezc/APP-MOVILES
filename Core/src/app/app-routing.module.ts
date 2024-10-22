@@ -27,6 +27,32 @@ const routes: Routes = [
     path: 'nosotros',
     loadChildren: () => import('./nosotros/nosotros.module').then( m => m.NosotrosPageModule)
   },
+  {
+    path: 'qrscanner',
+    loadChildren: () => import('./qrscanner/qrscanner.module').then( m => m.QrscannerPageModule)
+  },
+  {
+    path: 'qrgenerator/:codigo_web',
+    loadChildren: () => import('./qrgenerator/qrgenerator.module').then( m => m.QrgeneratorPageModule)
+  },
+  {
+    path: 'dashboard-profe',
+    loadChildren: () => import('./dashboard-profe/dashboard-profe.module').then( m => m.DashboardProfePageModule)
+  },
+  {
+    path: 'cursos-profe',
+    loadChildren: () => import('./cursos-profe/cursos-profe.module').then( m => m.CursosProfePageModule)
+  },
+  {
+    path: 'curso-detalle/:id',
+    loadChildren: () => import('./curso-detalle/curso-detalle.module').then( m => m.CursoDetallePageModule)
+  },
+  {
+    path: 'clases-curso/:id',
+    loadChildren: () => import('./clases-curso/clases-curso.module').then( m => m.ClasesCursoPageModule)
+  },
+
+
 
 
 ];

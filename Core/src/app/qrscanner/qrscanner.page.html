@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Escanear QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <h6>Scan o selecciona una imagen de un QR para su valor</h6>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="startScan()" expand="block">
+        Scan
+        <ion-icon slot="end" name="scan-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="readBarcodeFromImage()" expand="block">
+        Selecciona
+        <ion-icon slot="end" name="image-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-item *ngIf="scanResult">
+    <ion-label>
+      <p>Resultado del scan</p>
+      <div>{{ scanResult }}</div>
+    </ion-label>
+  </ion-item>
+</ion-content>
