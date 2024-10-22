@@ -53,7 +53,7 @@ export class HomePage {
         this.navCtrl.navigateForward(['/dashboard', { usuario: username }]);
       } else if (perfil === 'docente') {
         // Navegar a la vista para profesores
-        this.navCtrl.navigateForward(['/nosotros', { usuario: username }]);
+        this.navCtrl.navigateForward(['/dashboard-profe', { usuario: username }]);
       } else {
         // Manejar otros perfiles o redirigir a una vista genérica
         this.navCtrl.navigateForward(['/dashboard', { usuario: username }]);

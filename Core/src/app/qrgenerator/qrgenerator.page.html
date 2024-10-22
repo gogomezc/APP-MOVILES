@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <div id="qrImage">
+    <qr-code [value]="qrText" size="190" errorCorrectionLevel="M"></qr-code>
+    <div class="ion-padding-top">{{ qrText }}</div>
+  </div>
+  <ion-button (click)="captureScreen()" expand="block" class="submit ion-margin-top">
+    Compartir
+    <ion-icon slot="end" name="share-social-outline"></ion-icon>
+  </ion-button>
+</ion-content>
