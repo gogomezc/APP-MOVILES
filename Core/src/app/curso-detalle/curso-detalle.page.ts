@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../services/auth.service'; // Servicio de autenticación
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CursosService } from '../services/cursos.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-curso-detalle',
@@ -11,11 +13,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CursoDetallePage implements OnInit {
   curso: any;  // Aquí almacenaremos los detalles del curso
   apiUrl = 'https://www.presenteprofe.cl/api/v1/cursos'; // Base URL de la API
+  clases: any[]=[];
 
   constructor(
     private route: ActivatedRoute,
     private authService: AuthService, 
-    private http: HttpClient
+    private http: HttpClient,
+    private cursosService: CursosService,
+    private navController: NavController,
   ) {}
 
   async ngOnInit() {
@@ -46,4 +51,27 @@ export class CursoDetallePage implements OnInit {
       console.error('Error al obtener detalles del curso:', error);
     }
   }
+  async verClases(cursoId: number) {
+    const token = await this.authService.getToken();
+    if (token) {
+      this.cursosService.getClases(cursoId, token).subscribe(
+        (response: any) => {
+          this.clases = response.clases;
+          console.log('Clases del curso:', this.clases);
+        },
+        (error) => {
+          console.error('Error al obtener las clases:', error);
+        }
+      );
+    } else {
+      console.error('Token no encontrado.');
+    }
+  }
+
+  goBack() {
+    this.navController.pop(); // Retrocede a la página anterior
+  }
+
+
+
 }

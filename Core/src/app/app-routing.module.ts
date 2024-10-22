@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./qrscanner/qrscanner.module').then( m => m.QrscannerPageModule)
   },
   {
-    path: 'qrgenerator',
+    path: 'qrgenerator/:codigo_web',
     loadChildren: () => import('./qrgenerator/qrgenerator.module').then( m => m.QrgeneratorPageModule)
   },
   {
@@ -46,8 +46,9 @@ const routes: Routes = [
   {
     path: 'curso-detalle/:id',
     loadChildren: () => import('./curso-detalle/curso-detalle.module').then( m => m.CursoDetallePageModule)
-  },  {
-    path: 'clases-curso',
+  },
+  {
+    path: 'clases-curso/:id',
     loadChildren: () => import('./clases-curso/clases-curso.module').then( m => m.ClasesCursoPageModule)
   },
 

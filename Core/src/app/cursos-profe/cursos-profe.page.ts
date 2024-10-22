@@ -2,7 +2,7 @@ import { CursosService } from './../services/cursos.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { LoadingController, ToastController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-cursos-profe',
@@ -25,7 +25,8 @@ export class CursosProfePage implements OnInit {
     private loadingController: LoadingController,
     private toastController: ToastController,
     private router: Router,
-    private CursosService: CursosService
+    private CursosService: CursosService,
+    private navController: NavController,
   ) {}
 
   ngOnInit() {
@@ -104,6 +105,10 @@ export class CursosProfePage implements OnInit {
   }
   
 
+
+  goBack() {
+    this.navController.pop(); // Retrocede a la página anterior
+  }
   
 
 }

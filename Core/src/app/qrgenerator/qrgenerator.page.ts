@@ -1,9 +1,9 @@
-// qrgenerator.page.ts
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import html2canvas from 'html2canvas';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Share } from '@capacitor/share';
-import { LoadingController, Platform } from '@ionic/angular';
+import { LoadingController, Platform, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-qrgenerator',
@@ -11,12 +11,19 @@ import { LoadingController, Platform } from '@ionic/angular';
   styleUrls: ['./qrgenerator.page.scss'],
 })
 export class QrgeneratorPage {
-  qrText = 'fYPsgf';
+  qrText: string = '';
 
   constructor(
+    private route: ActivatedRoute,
     private loadingController: LoadingController,
     private platform: Platform,
+    private navController: NavController,
   ) { }
+
+  ngOnInit() {
+    // Obtener el código web de la URL
+    this.qrText = this.route.snapshot.paramMap.get('codigo_web') || '';
+  }
 
   captureScreen() {
     const element = document.getElementById('qrImage') as HTMLElement;
@@ -46,5 +53,8 @@ export class QrgeneratorPage {
     }).finally(() => {
       loading.dismiss();
     });
+  }
+  goBack() {
+    this.navController.pop(); // Retrocede a la página anterior
   }
 }

@@ -1,29 +1,24 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar>
     <ion-title>{{ curso?.nombre }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Volver
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-card *ngIf="curso">
-    <img [src]="curso.imagen" alt="{{ curso.nombre }}" />
-
+<ion-content>
+  <ion-card>
+    <img [src]="curso?.imagen" alt="{{ curso?.nombre }}">
     <ion-card-header>
-      <ion-card-title>{{ curso.nombre }}</ion-card-title>
+      <ion-card-title>{{ curso?.nombre }}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
-      <p>{{ curso.descripcion }}</p>
+      <p>{{ curso?.descripcion }}</p>
+      <ion-button [routerLink]="['/clases-curso', curso?.id]">Ver Clases del Curso</ion-button>
     </ion-card-content>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img [src]="curso.usuario.img" />
-      </ion-avatar>
-      <ion-label>
-        <h2>{{ curso.usuario.nombre_completo }}</h2>
-        <p>{{ curso.usuario.correo }}</p>
-        <p>{{ curso.usuario.perfil }}</p>
-      </ion-label>
-    </ion-item>
   </ion-card>
 </ion-content>

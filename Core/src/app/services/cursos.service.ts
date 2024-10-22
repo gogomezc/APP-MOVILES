@@ -28,7 +28,12 @@ export class CursosService {
     return this.http.post(this.apiUrl, cursoData, { headers });
   }
 
-
+  getClases(cursoId: number, token: string): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${token}`
+    });
+    return this.http.get(`${this.apiUrl}/${cursoId}/clase`, { headers });
+  }
 
 
   crearClase(cursoId: number, claseData: any, token: string): Observable<any> {
@@ -40,15 +45,5 @@ export class CursosService {
     return this.http.post(`${this.apiUrl}/${cursoId}/clase`, claseData, { headers });
   }
   
-  // Método para obtener todas las clases de un curso
-  getClasesByCurso(cursoId: number, token: string): Observable<any> {
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    });
-    
-    return this.http.get(`${this.apiUrl}/${cursoId}/clase`, { headers });
-  }
-
-
 }
 
