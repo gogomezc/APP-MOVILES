@@ -1,30 +1,39 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Escanear QR</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding ion-text-center">
-  <h6>Scan o selecciona una imagen de un QR para su valor</h6>
-  <ion-row>
-    <ion-col size="6">
-      <ion-button (click)="startScan()" expand="block">
-        Scan
-        <ion-icon slot="end" name="scan-outline"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="6">
-      <ion-button (click)="readBarcodeFromImage()" expand="block">
-        Selecciona
-        <ion-icon slot="end" name="image-outline"></ion-icon>
-      </ion-button>
-    </ion-col>
-  </ion-row>
+  <ion-card-header class="logo-header">
+    <ion-card-title class="heading">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+        alt="Logo"
+        class="logo"
+      />
+    </ion-card-title>
+  </ion-card-header>
 
-  <ion-item *ngIf="scanResult">
-    <ion-label>
-      <p>Resultado del scan</p>
-      <div>{{ scanResult }}</div>
-    </ion-label>
-  </ion-item>
+  <ion-card id="main-card" class="d-flex-center">
+    <ion-card-content>
+      <h6>Scan o selecciona una imagen de un QR para su valor</h6>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button color="warning" (click)="startScan()" expand="block" class="full-button">
+            Scan
+            <ion-icon slot="end" name="scan-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button color="warning" (click)="readBarcodeFromImage()" expand="block" class="full-button">
+            Selecciona
+            <ion-icon slot="end" name="image-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-item *ngIf="scanResult" class="result">
+        <ion-label>
+          <p>Resultado del scan</p>
+          <div>{{ scanResult }}</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
