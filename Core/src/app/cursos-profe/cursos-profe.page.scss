@@ -14,7 +14,10 @@ ion-content {
     background-color: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
   }
-  
+  .heading img {
+    width: 70%;
+    height: auto; /* Maintain aspect ratio */
+  }
   .heading {
     width: 100%;
     display: flex;
