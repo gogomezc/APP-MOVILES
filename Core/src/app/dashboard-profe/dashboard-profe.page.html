@@ -4,12 +4,17 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-list>
 
-      <ion-item routerLink="/nosotros">Nosotros</ion-item>
-      <ion-item routerLink="/home">Cerrar Sesión</ion-item>
-    </ion-list>
+  <!-- Menu con contenido envuelto en una card -->
+  <ion-content>
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item routerLink="/nosotros">Nosotros</ion-item>
+          <ion-item routerLink="/home">Cerrar Sesión</ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
   </ion-content>
 </ion-menu>
 
@@ -20,36 +25,37 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Menu</ion-title>
-      </ion-toolbar>
-      </ion-header>
+    </ion-toolbar>
+  </ion-header>
 
-      <ion-card>
-  <ion-card-header>
-    <ion-card-title class="heading">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
-        alt="Logo"
-      />
-    </ion-card-title>
-  </ion-card-header>
+  <!-- Card principal -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="heading">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+          alt="Logo"
+        />
+      </ion-card-title>
+    </ion-card-header>
 
-  <ion-card-content>
-    <h1>Bienvenido, {{ usuario }} !</h1>
+    <ion-card-content>
+      <!-- Mensaje de bienvenida -->
+      <h1>Bienvenido, {{ usuario }} !</h1>
 
-    <ion-card id="contenido1">
-      <div style="align-items: center;">
-        <div style="text-align: center;">
-          <img src="https://i.ibb.co/99L8NxY/qr-code.png" alt="">
-          <ion-card-header>
-            <ion-card-title>Ver mis cursos</ion-card-title>
-          </ion-card-header>
+      <!-- Contenido dentro de una card -->
+      <ion-card id="contenido1">
+        <div style="align-items: center;">
+          <div style="text-align: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYFE4fMyH62NE2VtFwcDRGaELC8KnfWDYcZQ&s" alt="">
+            <ion-card-header>
+              <ion-button id="main-btn" routerLink="/cursos-profe" shape="round" color="warning" expand="block">
+                ver mis cursos
+              </ion-button>
+            </ion-card-header>
+          </div>
         </div>
-      </div>
-    </ion-card>
-  </ion-card-content>
-  <ion-button routerLink="/cursos-profe" shape="round">
-    Click me
-  </ion-button>
-</ion-card>
-
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

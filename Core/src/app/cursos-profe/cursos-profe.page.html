@@ -9,6 +9,15 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-card>
+    <ion-card-header>
+      <ion-card-title class="heading">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+          alt="Logo"
+        />
+      </ion-card-title>
+    </ion-card-header>
 
 <ion-content>
   <ion-list *ngIf="cursos && cursos.length > 0; else noCourses">
@@ -40,25 +49,25 @@
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Nombre del Curso</ion-label>
-        <ion-input [(ngModel)]="nuevoCurso.nombre" placeholder="Curso de Laravel"></ion-input>
+        <ion-input [(ngModel)]="nuevoCurso.nombre" placeholder=""></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Sigla</ion-label>
-        <ion-input [(ngModel)]="nuevoCurso.sigla" placeholder="LAR101"></ion-input>
+        <ion-input [(ngModel)]="nuevoCurso.sigla" placeholder=""></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Institución</ion-label>
-        <ion-input [(ngModel)]="nuevoCurso.institucion" placeholder="Duoc UC"></ion-input>
+        <ion-input [(ngModel)]="nuevoCurso.institucion" placeholder=""></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Descripción</ion-label>
-        <ion-input [(ngModel)]="nuevoCurso.descripcion" placeholder="Introducción a Laravel"></ion-input>
+        <ion-input [(ngModel)]="nuevoCurso.descripcion" placeholder=""></ion-input>
       </ion-item>
 
-      <ion-button expand="full" (click)="crearCurso()">Crear Curso</ion-button>
+      <ion-button color="warning" expand="full" (click)="crearCurso()">Crear Curso</ion-button>
     </ion-card-content>
   </ion-card>
 
