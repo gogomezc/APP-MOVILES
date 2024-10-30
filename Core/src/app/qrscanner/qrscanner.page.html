@@ -26,6 +26,12 @@
             <ion-icon slot="end" name="image-outline"></ion-icon>
           </ion-button>
         </ion-col>
+        <ion-col size="12">
+          <ion-button color="warning" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  expand="block" class="full-button">
+            Volver
+            <ion-icon name="arrow-undo-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
       </ion-row>
 
       <ion-item *ngIf="scanResult" class="result">

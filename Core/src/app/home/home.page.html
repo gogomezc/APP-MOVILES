@@ -16,13 +16,16 @@
           slot="start"
           name="person-outline"
           class="inputIcon"
+          
         ></ion-icon>
         <ion-input
+        labelPlacement="floating"
           [(ngModel)]="usuario"
-          placeholder="Usuario"
+          label="Usuario"
           type="text"
           id="username"
           class="inputField"
+          
         ></ion-input>
       </ion-item>
 
@@ -34,8 +37,9 @@
           class="inputIcon"
         ></ion-icon>
         <ion-input
+        labelPlacement="floating"
           [(ngModel)]="password"
-          placeholder="Contraseña"
+          label="Contraseña"
           type="password"
           id="password"
           class="inputField"
@@ -50,7 +54,7 @@
         <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a>
 
         <!-- Botón para ingresar, que llama a validateInputs() -->
-        <ion-button id="button" (click)="validateInputs()"> Ingresar </ion-button>
+        <ion-button color="warning" id="button" (click)="validateInputs()"> Ingresar </ion-button> 
       </div>
     </ion-card-content>
   </ion-card>
