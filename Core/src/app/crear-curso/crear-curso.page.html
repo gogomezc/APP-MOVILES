@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Crear Curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="logo">
+  <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+   />
+  </div>
+  <ion-header>
+    <div class="h11">
+ <h1>Crear Un Curso</h1>
+  </div>
+  </ion-header>
+</ion-content>
+
+<ion-card>
+  <ion-card-header>
+ 
+  </ion-card-header>
+
+  <ion-card-content class="Carta">
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.nombre" label="Nombre del cursos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.sigla" label="Sigla"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.institucion" label="Institución"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating"  [(ngModel)]="nuevoCurso.descripcion" label="Descripción"></ion-input>
+    </ion-item>
+
+    <ion-button color="warning" expand="full" (click)="crearCurso()">Crear Curso</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<div class="Banner">
+<ion-tab-bar slot="bottom">
+  <ion-tab-button routerLink="/cursos-profe" tab="schedule">
+    <ion-icon name="albums-outline"></ion-icon>
+    <ion-label>Mis cursos</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink="/nosotros" tab="speakers">
+    <ion-icon name="people-outline"></ion-icon>
+    <ion-label>Nosotros</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink="/crear-curso" tab="map">
+    <ion-icon name="medkit-outline"></ion-icon>
+    <ion-label>Crear Curso</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink="/home" tab="about">
+    <ion-icon name="enter-outline"></ion-icon>
+    <ion-label>Cerrar Sesion</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+</div>

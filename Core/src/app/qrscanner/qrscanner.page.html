@@ -26,12 +26,7 @@
             <ion-icon slot="end" name="image-outline"></ion-icon>
           </ion-button>
         </ion-col>
-        <ion-col size="12">
-          <ion-button color="warning" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  expand="block" class="full-button">
-            Volver
-            <ion-icon name="arrow-undo-outline"></ion-icon>
-          </ion-button>
-        </ion-col>
+       
       </ion-row>
 
       <ion-item *ngIf="scanResult" class="result">
@@ -43,3 +38,21 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+<div class="Banner">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/qrscanner" tab="schedule">
+      <ion-icon name="push-outline"></ion-icon>
+      <ion-label>Ingresar Asistencia</ion-label>
+    </ion-tab-button>
+  
+    <ion-tab-button routerLink="/nosotros-alumnos" tab="speakers">
+      <ion-icon name="people-outline"></ion-icon>
+      <ion-label>Nosotros</ion-label>
+    </ion-tab-button>
+  
+    <ion-tab-button routerLink="/home" tab="about">
+      <ion-icon name="enter-outline"></ion-icon>
+      <ion-label>Cerrar Sesion</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+  </div>

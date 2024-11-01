@@ -51,6 +51,16 @@ const routes: Routes = [
     path: 'clases-curso/:id',
     loadChildren: () => import('./clases-curso/clases-curso.module').then( m => m.ClasesCursoPageModule)
   },
+  {
+    path: 'crear-curso',
+    loadChildren: () => import('./crear-curso/crear-curso.module').then( m => m.CrearCursoPageModule)
+  },  {
+    path: 'nosotros-alumnos',
+    loadChildren: () => import('./nosotros-alumnos/nosotros-alumnos.module').then( m => m.NosotrosAlumnosPageModule)
+  },
+
+ 
+
 
 
 
