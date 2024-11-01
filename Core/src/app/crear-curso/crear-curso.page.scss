@@ -1,0 +1,59 @@
+ion-content {
+    /* Increase the margin-top value to move it further down */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Fondo gris claro */
+  }
+
+  .Carta {
+    width: 300px;
+    padding: 20px;
+    margin: 10px auto; /* Automáticamente centra el elemento horizontalmente */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-block-end: 100px;
+  }
+
+  
+  
+.h11 {
+    text-align: center;
+}
+
+
+.Banner {
+  /* Ajusta la altura del contenedor de la barra de tabs */
+  height: 80px;
+}
+
+.Banner ion-tab-bar {
+  /* Ajusta el tamaño de la barra de tabs */
+  height: 100%;
+  font-size: 1.2rem; /* Aumenta el tamaño del texto */
+}
+
+.Banner ion-tab-button {
+  /* Ajusta el tamaño de cada botón */
+  --color: #FFA500;
+  --color-selected: #001aff;
+  --padding-top: 12px;
+}
+
+.Banner ion-tab-button ion-icon {
+  font-size: 24px; /* Aumenta el tamaño del ícono */
+}
+
+.Banner ion-tab-button ion-label {
+  font-size: 14px; /* Aumenta el tamaño de la etiqueta */
+}
+
+.logo {
+  width: 80%; 
+  display: block;
+  margin: 0 auto;
+}

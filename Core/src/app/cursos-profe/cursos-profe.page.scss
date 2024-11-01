@@ -95,3 +95,32 @@ ion-content {
     margin-top: 80px ;
     align-items: center;
   }
+
+  .Banner {
+    /* Ajusta la altura del contenedor de la barra de tabs */
+    height: 80px;
+    position: relative;
+  }
+  
+  .Banner ion-tab-bar {
+    /* Ajusta el tamaño de la barra de tabs */
+    height: 100%;
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+  }
+  
+  .Banner ion-tab-button {
+    /* Ajusta el tamaño de cada botón */
+    --color: #FFA500;
+    --color-selected: #001aff;
+    --padding-top: 12px;
+  }
+  
+  .Banner ion-tab-button ion-icon {
+    font-size: 24px; /* Aumenta el tamaño del ícono */
+  }
+  
+  .Banner ion-tab-button ion-label {
+    font-size: 14px; /* Aumenta el tamaño de la etiqueta */
+  }
+
+ 

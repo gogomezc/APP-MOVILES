@@ -1,7 +1,7 @@
 <ion-menu side="start" menuId="first" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      
     </ion-toolbar>
   </ion-header>
 
@@ -10,8 +10,7 @@
     <ion-card>
       <ion-card-content>
         <ion-list>
-          <ion-item routerLink="/nosotros">Nosotros</ion-item>
-          <ion-item routerLink="/home">Cerrar Sesión</ion-item>
+        
         </ion-list>
       </ion-card-content>
     </ion-card>
@@ -19,14 +18,7 @@
 </ion-menu>
 
 <ion-content id="main-content" class="ion-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
   <!-- Card principal -->
   <ion-card>
@@ -49,6 +41,8 @@
           <div style="text-align: center;">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYFE4fMyH62NE2VtFwcDRGaELC8KnfWDYcZQ&s" alt="">
             <ion-card-header>
+              <h2>Tus herramientas de trabajo estan listas</h2>
+              <h2>¡Bienvenido Docente!</h2>
             </ion-card-header>
           </div>
         </div>
@@ -56,24 +50,26 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+<div class="Banner">
 <ion-tab-bar slot="bottom">
   <ion-tab-button routerLink="/cursos-profe" tab="schedule">
-    <ion-icon name="calendar" aria-hidden="true"></ion-icon>
+    <ion-icon name="albums-outline"></ion-icon>
     <ion-label>Mis cursos</ion-label>
   </ion-tab-button>
 
-  <ion-tab-button tab="speakers">
-    <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
-    <ion-label>Speakers</ion-label>
+  <ion-tab-button routerLink="/nosotros" tab="speakers">
+    <ion-icon name="people-outline"></ion-icon>
+    <ion-label>Nosotros</ion-label>
   </ion-tab-button>
 
-  <ion-tab-button tab="map">
-    <ion-icon name="map" aria-hidden="true"></ion-icon>
-    <ion-label>Map</ion-label>
+  <ion-tab-button routerLink="/crear-curso" tab="map">
+    <ion-icon name="medkit-outline"></ion-icon>
+    <ion-label>Crear Curso</ion-label>
   </ion-tab-button>
 
   <ion-tab-button routerLink="/home" tab="about">
-    <ion-icon name="information-circle" aria-hidden="true"></ion-icon>
+    <ion-icon name="enter-outline"></ion-icon>
     <ion-label>Cerrar Sesion</ion-label>
   </ion-tab-button>
 </ion-tab-bar>
+</div>

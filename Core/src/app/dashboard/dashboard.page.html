@@ -1,27 +1,7 @@
-<ion-menu side="start" menuId="first" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-
-      <ion-item routerLink="/nosotros">Nosotros</ion-item>
-      <ion-item (click)="goToContacto()">Contacto</ion-item>
-      <ion-item routerLink="/home">Cerrar Sesión</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
 
 <ion-content id="main-content" class="ion-content">
   <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Menu</ion-title>
-      </ion-toolbar>
+    
       </ion-header>
 
       <ion-card>
@@ -42,10 +22,8 @@
         <div style="text-align: center;">
           <img src="https://icons.veryicon.com/png/o/business/oa-attendance-icon/attendance-adjustment.png" alt="">
           <ion-card-header>
-            <ion-button color="warning" 
-           id="asist-btn" routerLink="/qrscanner" shape="round">
-              ingresar asistencia
-            </ion-button>
+            <h2>Puedes Ingresar tu Asistencia En boton Ingresar Asistencia</h2>
+            <h2>¡Bienvenido Estudiante!</h2>
           </ion-card-header>
         </div>
       </div>
@@ -54,5 +32,22 @@
   
 </ion-card>
 </ion-content>
-
+<div class="Banner">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/qrscanner" tab="schedule">
+      <ion-icon name="push-outline"></ion-icon>
+      <ion-label>Ingresar Asistencia</ion-label>
+    </ion-tab-button>
+  
+    <ion-tab-button routerLink="/nosotros-alumnos" tab="speakers">
+      <ion-icon name="people-outline"></ion-icon>
+      <ion-label>Nosotros</ion-label>
+    </ion-tab-button>
+  
+    <ion-tab-button routerLink="/home" tab="about">
+      <ion-icon name="enter-outline"></ion-icon>
+      <ion-label>Cerrar Sesion</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+  </div>
 
