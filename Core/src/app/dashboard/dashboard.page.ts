@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -10,7 +11,11 @@ import { NavController } from '@ionic/angular';
 export class DashboardPage implements OnInit {
   usuario: string = "";
 
-  constructor(private route: ActivatedRoute, private menu:MenuController, private navCtrl:NavController) { }
+  constructor(private route: ActivatedRoute, 
+    private menu:MenuController, 
+    private navCtrl:NavController,
+    
+  ) { }
 
   ngOnInit() {
     
@@ -28,3 +33,4 @@ export class DashboardPage implements OnInit {
       this.navCtrl.navigateForward(['/contacto', { usuario: this.usuario }]);
     }
   }
+ 

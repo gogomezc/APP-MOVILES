@@ -1,4 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="Inscripcion">
+  <ion-title>Inscripcion Asistencia</ion-title>
+    </div>
+  </ion-toolbar>
+    </ion-header>
 <ion-content class="ion-padding ion-text-center">
+  
   <ion-card-header class="logo-header">
     <ion-card-title class="heading">
       <img
@@ -11,38 +19,32 @@
 
   <ion-card id="main-card" class="d-flex-center">
     <ion-card-content>
-      <h6>Scan o selecciona una imagen de un QR para su valor</h6>
-
-      <ion-row>
+        <ion-row>
+        <h6>Escanea una imagen de un QR para Inscripcion.</h6>
         <ion-col size="12">
           <ion-button color="warning" (click)="startScan()" expand="block" class="full-button">
             Scan
             <ion-icon slot="end" name="scan-outline"></ion-icon>
           </ion-button>
         </ion-col>
+        <br>
+        <h6>Selecciona una imagen a escanear.</h6>
         <ion-col size="12">
           <ion-button color="warning" (click)="readBarcodeFromImage()" expand="block" class="full-button">
             Selecciona
             <ion-icon slot="end" name="image-outline"></ion-icon>
           </ion-button>
         </ion-col>
-       
       </ion-row>
-
-      <ion-item *ngIf="scanResult" class="result">
-        <ion-label>
-          <p>Resultado del scan</p>
-          <div>{{ scanResult }}</div>
-        </ion-label>
-      </ion-item>
-    </ion-card-content>
+      </ion-card-content>
   </ion-card>
 </ion-content>
+
 <div class="Banner">
   <ion-tab-bar slot="bottom">
     <ion-tab-button routerLink="/qrscanner" tab="schedule">
       <ion-icon name="push-outline"></ion-icon>
-      <ion-label>Ingresar Asistencia</ion-label>
+      <ion-label>Escanear Asistencia</ion-label>
     </ion-tab-button>
   
     <ion-tab-button routerLink="/nosotros-alumnos" tab="speakers">
