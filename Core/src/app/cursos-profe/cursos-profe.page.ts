@@ -2,8 +2,10 @@ import { CursosService } from './../services/cursos.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LoadingController, ToastController, NavController } from '@ionic/angular';
+import { LoadingController, ToastController} from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular'; 
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-cursos-profe',
   templateUrl: './cursos-profe.page.html',
@@ -27,6 +29,8 @@ export class CursosProfePage implements OnInit {
     private router: Router,
     private CursosService: CursosService,
     private navController: NavController,
+    private navCtrl: NavController,
+    private alertController: AlertController
   ) {}
 
   ngOnInit() {
@@ -110,5 +114,30 @@ export class CursosProfePage implements OnInit {
     this.navController.pop(); // Retrocede a la página anterior
   }
   
+// Esta función se invoca cuando el usuario hace clic en el botón "Cerrar sesión"
+async presentAlert() {
+  const alert = await this.alertController.create({
+    header: '¿Quieres Salir?',
+    message: '¡¡Cerraras tu sesion actual!!',
+    buttons: [
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cierre de sesión cancelado');
+        }
+      },
+      {
+        text: 'Aceptar',
+        handler: () => {
+          console.log('Cierre de sesión confirmado');
+          this.navCtrl.navigateRoot('/home'); // Redirige a la página principal (home)
+        }
+      }
+    ]
+  });
+
+  await alert.present(); // Presentamos la alerta
+}
 
 }

@@ -10,7 +10,7 @@
   <ion-card-header class="logo-header">
     <ion-card-title class="heading">
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+        src="" 
         alt="Logo"
         class="logo"
       />
@@ -52,9 +52,10 @@
       <ion-label>Nosotros</ion-label>
     </ion-tab-button>
   
-    <ion-tab-button routerLink="/home" tab="about">
+   
+    <ion-tab-button (click)="presentAlert()" tab="about">
       <ion-icon name="enter-outline"></ion-icon>
       <ion-label>Cerrar Sesion</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
-  </div>
+</div>

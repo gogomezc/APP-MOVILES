@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
-    path: 'contacto',
-    loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoPageModule)
-  },
-  {
     path: 'nosotros',
     loadChildren: () => import('./nosotros/nosotros.module').then( m => m.NosotrosPageModule)
   },
@@ -54,7 +50,8 @@ const routes: Routes = [
   {
     path: 'crear-curso',
     loadChildren: () => import('./crear-curso/crear-curso.module').then( m => m.CrearCursoPageModule)
-  },  {
+  },
+  {
     path: 'nosotros-alumnos',
     loadChildren: () => import('./nosotros-alumnos/nosotros-alumnos.module').then( m => m.NosotrosAlumnosPageModule)
   },

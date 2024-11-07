@@ -1,11 +1,12 @@
-// qrscanner.page.ts
 import { Component, OnInit } from '@angular/core';
 import { BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
 import { FilePicker } from '@capawesome/capacitor-file-picker';
-import { AuthService } from '../services/auth.service'; 
+import { AuthService } from '../services/auth.service';
 import { LoadingController, ModalController, Platform, ToastController } from '@ionic/angular';
 import { BarcodeScanningModalComponent } from './barcode-scanning-modal.component';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { AlertController } from '@ionic/angular'; 
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-qrscanner',
@@ -16,12 +17,14 @@ export class QrscannerPage implements OnInit {
   scanResult: string = '';
 
   constructor(
-    private http: HttpClient, 
+    private http: HttpClient,
     private loadingController: LoadingController,
     private platform: Platform,
     private modalController: ModalController,
-    private authService: AuthService, 
-    private toastController: ToastController 
+    private authService: AuthService,
+    private toastController: ToastController,
+    private navCtrl: NavController,
+    private alertController: AlertController
   ) { }
 
   ngOnInit(): void {
@@ -89,4 +92,32 @@ export class QrscannerPage implements OnInit {
     const toast = await this.toastController.create({ message, duration: 2000, position: 'bottom' });
     toast.present();
   }
+
+
+  // Esta función se invoca cuando el usuario hace clic en el botón "Cerrar sesión"
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: '¿Quieres Salir?',
+      message: '¡¡Cerraras tu sesion actual!!',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cierre de sesión cancelado');
+          }
+        },
+        {
+          text: 'Aceptar',
+          handler: () => {
+            console.log('Cierre de sesión confirmado');
+            this.navCtrl.navigateRoot('/home'); // Redirige a la página principal (home)
+          }
+        }
+      ]
+    });
+
+    await alert.present(); // Presentamos la alerta
+  }
 }
+
