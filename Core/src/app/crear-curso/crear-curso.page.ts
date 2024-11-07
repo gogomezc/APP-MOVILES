@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LoadingController, ToastController, NavController } from '@ionic/angular';
+import { LoadingController, ToastController} from '@ionic/angular';
 import { Router } from '@angular/router';
 import { CursosService } from './../services/cursos.service';
+import { AlertController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-crear-curso',
@@ -27,6 +29,8 @@ export class CrearCursoPage implements OnInit {
     private router: Router,
     private CursosService: CursosService,
     private navController: NavController,
+    private alertController: AlertController,
+    private navCtrl: NavController
   ) {}
 
   ngOnInit() {
@@ -35,7 +39,7 @@ export class CrearCursoPage implements OnInit {
 
   async getCursos() {
     const loading = await this.loadingController.create({
-      message: 'Cargando cursos...',
+      message: 'Cargando...',
     });
     await loading.present();
 
@@ -57,7 +61,7 @@ export class CrearCursoPage implements OnInit {
       
       this.cursos = response.cursos || []; // Asignar cursos a la variable
 
-      await this.showToast('Cursos cargados exitosamente');
+      await this.showToast('Cargando creador de cursos...');
     } catch (error) {
       console.error('Error al obtener los cursos', error);
       await this.showToast('Error al cargar los cursos: ' + ((error as any).message || error));
@@ -110,5 +114,30 @@ export class CrearCursoPage implements OnInit {
     this.navController.pop(); // Retrocede a la página anterior
   }
   
+  // Esta función se invoca cuando el usuario hace clic en el botón "Cerrar sesión"
+ async presentAlert() {
+  const alert = await this.alertController.create({
+    header: '¿Quieres Salir?',
+    message: '¡¡Cerraras tu sesion actual!!',
+    buttons: [
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cierre de sesión cancelado');
+        }
+      },
+      {
+        text: 'Aceptar',
+        handler: () => {
+          console.log('Cierre de sesión confirmado');
+          this.navCtrl.navigateRoot('/home'); // Redirige a la página principal (home)
+        }
+      }
+    ]
+  });
+
+  await alert.present(); // Presentamos la alerta
+}
 
 }

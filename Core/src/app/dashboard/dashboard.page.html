@@ -8,7 +8,7 @@
   <ion-card-header>
     <ion-card-title class="heading">
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+        src="" class="logo"
         alt="Logo"
       />
     </ion-card-title>
@@ -20,8 +20,8 @@
     <ion-card id="contenido1">
       <div style="align-items: center;">
         <div style="text-align: center;">
-          <img src="https://icons.veryicon.com/png/o/business/oa-attendance-icon/attendance-adjustment.png" alt="">
-          <ion-card-header>
+          <img src="https://icons.veryicon.com/png/o/business/oa-attendance-icon/attendance-adjustment.png" alt="" class="imgca">
+          <ion-card-header class="hederletra">
             <h2>Puedes Ingresar tu Asistencia En boton Ingresar Asistencia</h2>
             <h2>¡Bienvenido Estudiante!</h2>
           </ion-card-header>
@@ -44,10 +44,11 @@
       <ion-label>Nosotros</ion-label>
     </ion-tab-button>
   
-    <ion-tab-button routerLink="/home" tab="about">
+   
+    <ion-tab-button (click)="presentAlert()" tab="about">
       <ion-icon name="enter-outline"></ion-icon>
       <ion-label>Cerrar Sesion</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
-  </div>
+</div>
 
