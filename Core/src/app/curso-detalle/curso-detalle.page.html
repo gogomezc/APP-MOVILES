@@ -11,14 +11,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card class="gustom">
     <img [src]="curso?.imagen" alt="{{ curso?.nombre }}">
     <ion-card-header>
       <ion-card-title>{{ curso?.nombre }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p>{{ curso?.descripcion }}</p>
-      <ion-button color="warning" [routerLink]="['/clases-curso', curso?.id]">Ver Clases del Curso</ion-button>
+      <ion-button  color="warning" [routerLink]="['/clases-curso', curso?.id]">Ver Clases del Curso</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

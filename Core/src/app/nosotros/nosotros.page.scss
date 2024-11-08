@@ -103,3 +103,44 @@ ion-content{
   .Nosotros {
     text-align: center;
   }
+
+
+  .logo {
+    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    .logo {
+      content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
+    }
+  
+    ion-card {
+      margin: auto;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+    .tituloabajo{   /* me gusta usar mas px*/
+      text-align: center; 
+      font-size: 24px;
+      color: #ffffff;
+      font-size: 2.0rem; /* aqui ajustamos el tamaño del titulo "Nosotros"*/
+    }
+
+    .gustom {
+
+      background-color: #030303; // Fondo más oscuro en modo oscuro
+      box-shadow: 0px 4px 12px rgba(255, 208, 0, 0.979);
+      margin-top: 20px;
+      margin-block: 20px;
+    }
+    .Banner ion-tab-button {
+      /* Ajusta el tamaño de cada botón */
+      --color: #FFA500;
+      --color-selected: #ffffff;
+      --padding-top: 12px;
+    }
+  }

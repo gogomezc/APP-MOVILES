@@ -9,40 +9,41 @@
 <ion-content [fullscreen]="true">
   <div class="logo">
   <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+        src=""
    />
   </div>
   
     <div class="h11">
  <h1>Crear Un Curso</h1>
   </div>
+  
+
+  
+    <ion-card-content class="custom-card">
+      <ion-item>
+        <ion-label position="floating"></ion-label>
+        <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.nombre" label="Nombre del curso"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating"></ion-label>
+        <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.sigla" label="Sigla"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating"></ion-label>
+        <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.institucion" label="Institución"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating"></ion-label>
+        <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.descripcion" label="Descripción"></ion-input>
+      </ion-item>
+  
+      <ion-button color="warning" expand="full" (click)="crearCurso()" class="crear-curso-button">Crear Curso</ion-button>
+    </ion-card-content>
   </ion-content>
-
-<ion-card>
-  <ion-card-content class="Carta">
-    <ion-item>
-      <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.nombre" label="Nombre del cursos"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.sigla" label="Sigla"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating" [(ngModel)]="nuevoCurso.institucion" label="Institución"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating"  [(ngModel)]="nuevoCurso.descripcion" label="Descripción"></ion-input>
-    </ion-item>
-
-    <ion-button color="warning" expand="full" (click)="crearCurso()">Crear Curso</ion-button>
-  </ion-card-content>
-</ion-card>
+  
 
 <div class="Banner">
 <ion-tab-bar slot="bottom">

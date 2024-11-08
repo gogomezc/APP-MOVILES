@@ -61,7 +61,7 @@ export class CrearCursoPage implements OnInit {
       
       this.cursos = response.cursos || []; // Asignar cursos a la variable
 
-      await this.showToast('Cargando creador de cursos...');
+      await this.showToast('Cursos Cargados con exito...');
     } catch (error) {
       console.error('Error al obtener los cursos', error);
       await this.showToast('Error al cargar los cursos: ' + ((error as any).message || error));

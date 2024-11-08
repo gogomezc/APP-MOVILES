@@ -10,12 +10,12 @@
   <ion-card-header>
     <ion-card-title class="heading">
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"
+        src=""
         alt="Logo"
       />
     </ion-card-title>
   </ion-card-header>
-
+  <h3>Bienvenido a mis cursos</h3>
   <ion-list class="course-list" *ngIf="cursos && cursos.length > 0; else noCourses">
     <ion-item *ngFor="let curso of cursos">
       <ion-thumbnail slot="start">
@@ -25,7 +25,7 @@
         <h2>{{ curso.nombre }}</h2>
         <p>{{ curso.descripcion }}</p>
       </ion-label>
-      <ion-button (click)="verDetalleCurso(curso.id)" expand="block" fill="clear" shape="round">
+      <ion-button  class="gustomver" (click)="verDetalleCurso(curso.id)" expand="block" fill="clear" shape="round">
         Ver
       </ion-button>
     </ion-item>
