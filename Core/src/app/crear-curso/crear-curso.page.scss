@@ -10,13 +10,14 @@ ion-content {
     width: 300px;
     padding: 20px;
     margin: 10px auto; /* Automáticamente centra el elemento horizontalmente */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #4e4e4e;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     text-align: center;
     margin-block-end: 100px;
+    margin-block-start: 10px;
   }
 
   
@@ -56,4 +57,86 @@ ion-content {
   width: 80%; 
   display: block;
   margin: 0 auto;
+  
 }
+
+.ion-valid.sc-ion-input-md-h {
+  --highlight-color: #ffee05;
+}
+
+.custom-card {
+  width: 350px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #6e6e6e; // Fondo oscuro para contraste
+  border-radius: 12px; // Bordes redondeados
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); // Sombra suave
+  color: #ffffff; // Texto en blanco para mejor visibilidad
+  margin-top: 80px;
+  ion-item {
+    --background: transparent; // Fondo transparente en los inputs
+    color: #ffffff;
+
+    ion-input {
+      color: #ffffff;
+      &::placeholder {
+        color: #888888; // Color de los placeholders
+      }
+    }
+  }
+}
+
+.crear-curso-button {
+  background-color: #ffa500; // Color del botón
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(#ffa500, 10%);
+  }
+}
+
+.logo {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+}
+
+// Estilo en modo oscuro
+@media (prefers-color-scheme: dark) {
+
+  
+  .custom-card {
+    background-color: #030303; // Fondo más oscuro en modo oscuro
+    box-shadow: 0px 4px 12px rgba(255, 208, 0, 0.979);
+    margin-top: 80px;
+  }
+
+  .crear-curso-button {
+    background-color: #ffa500;
+  }
+
+  .ion-valid.sc-ion-input-md-h {
+    --highlight-color: #ffee05;
+  }
+  .Carta {
+    width: 300px;
+    padding: 20px;
+    margin: 10px auto; /* Automáticamente centra el elemento horizontalmente */
+    background-color: #ffffff;
+    border: 1px solid #4e4e4e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-block-end: 100px;
+    position: absolute;
+  }
+
+  .logo {
+    content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
+  }
+
+  }

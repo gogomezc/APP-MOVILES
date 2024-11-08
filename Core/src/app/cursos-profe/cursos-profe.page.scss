@@ -126,3 +126,39 @@ ion-content {
  .Cursos {
   text-align: center;
  }
+
+ .heading  {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+}
+
+h3{
+
+  text-align: center;
+  }
+
+
+
+ @media (prefers-color-scheme: dark) {
+ 
+  .heading {
+
+    content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
+
+  
+  }
+  
+  .heading {
+    width: 100%;
+  }
+
+  .gustomver {
+
+    color: #FFA500;
+  }
+ 
+  h3{
+
+  text-align: center;
+  }
+
+ }

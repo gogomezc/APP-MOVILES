@@ -135,3 +135,79 @@ ion-content {
   .Banner ion-tab-button ion-label {
     font-size: 14px; /* Aumenta el tamaño de la etiqueta */
   }
+
+  .logo {
+    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+  }
+  h2 {
+    color: rgb(255, 255, 255);
+  }
+
+  h1 {
+    color: #000000;
+  }
+  .gustom {
+    background-color: #8a8a8a; // Fondo más oscuro en modo oscuro
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.979);
+
+  }
+
+  .hederletra {
+    background-color: rgb(95, 95, 95);
+      }
+
+      .imgca {
+    
+      
+        margin-block: 5px;
+      }
+      
+  @media (prefers-color-scheme: dark) {
+    .logo {
+      content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
+    }
+    ion-content {
+      /* Increase the margin-top value to move it further down */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000000; /* Fondo gris claro */
+    }
+    ion-card {
+      margin: auto;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      border-radius: 20px;
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+
+    h1 {
+      color: #f0f0f0;
+    }
+
+    .imgca {
+    
+      
+      margin-block: 5px;
+    }
+  
+    .hederletra {
+  background-color: rgb(95, 95, 95);
+    }
+  
+    h2 {
+      color: aliceblue;
+    }
+  
+   
+  
+    .gustom {
+      background-color: #8a8a8a; // Fondo más oscuro en modo oscuro
+      box-shadow: 0px 8px 12px rgba(255, 208, 0, 0.979);
+  
+  
+    }
+
+  }
