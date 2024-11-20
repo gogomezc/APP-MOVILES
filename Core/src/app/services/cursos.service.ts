@@ -44,6 +44,16 @@ export class CursosService {
   
     return this.http.post(`${this.apiUrl}/${cursoId}/clase`, claseData, { headers });
   }
+
+  getAsistencias(idCurso: number, codigoWeb: string, token: string): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${token}`
+    });
+    const url = `${this.apiUrl}/${idCurso}/clase/${codigoWeb}/`;
+    return this.http.get(url, { headers });
+  }
+  
+  
   
 }
 

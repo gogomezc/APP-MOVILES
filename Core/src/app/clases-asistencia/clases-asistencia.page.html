@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencias de la Clase</ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/clases-curso/{{ idCurso }}">
+        <ion-icon name="arrow-back"></ion-icon>
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ clase.nombre }}</ion-card-title>
+      <ion-card-subtitle>Fecha: {{ clase.fecha }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Total de Asistencias: {{ totalAsistencias }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let asistencia of asistencias">
+      <ion-label>
+        <h2>{{ asistencia.nombre_estudiante }}</h2>
+        <p>Hora: {{ asistencia.hora_asistencia }}</p>
+      </ion-label>
+      <ion-badge color="success" *ngIf="asistencia.presente">Presente</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

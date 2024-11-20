@@ -15,12 +15,15 @@
     <ion-item *ngFor="let clase of clases">
       <ion-label>
         <h2>{{ clase.fecha }}</h2>
-        <p>{{ clase.hora_inicio }}</p>
-        <p>{{ clase.hora_termino }}</p>
+        <p>Hora Inicio: {{ clase.hora_inicio }}</p>
+        <p> Hora Término: {{ clase.hora_termino }}</p>
         <p>{{ clase.codigo_web }}</p>
       </ion-label>
       <ion-button [routerLink]="['/qrgenerator', clase.codigo_web]" expand="block" fill="clear" shape="round">
         Ver QR
+      </ion-button>
+      <ion-button [routerLink]="['/clases-asistencia', cursoId, clase.codigo_web]" expand="block" fill="clear" shape="round">
+        Ver Asistencias
       </ion-button>
     </ion-item>
   </ion-list>

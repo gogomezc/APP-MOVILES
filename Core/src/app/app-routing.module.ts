@@ -55,6 +55,11 @@ const routes: Routes = [
     path: 'nosotros-alumnos',
     loadChildren: () => import('./nosotros-alumnos/nosotros-alumnos.module').then( m => m.NosotrosAlumnosPageModule)
   },
+  {
+    path: 'clases-asistencia/:idCurso/:codigoWeb',
+    loadChildren: () => import('./clases-asistencia/clases-asistencia.module').then( m => m.ClasesAsistenciaPageModule)
+  },
+
 
  
 
