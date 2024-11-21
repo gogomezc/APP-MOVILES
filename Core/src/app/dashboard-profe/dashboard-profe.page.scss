@@ -120,10 +120,14 @@ ion-content {
     height: 100%;
     font-size: 1.2rem; /* Aumenta el tamaño del texto */
   }
+
+  .cerrar {
+    color: red;
+  }
   
   .Banner ion-tab-button {
     /* Ajusta el tamaño de cada botón */
-    --color: #FFA500;
+    --color: #000000;
     --color-selected: #001aff;
     --padding-top: 12px;
   }
@@ -137,23 +141,24 @@ ion-content {
   }
 
   .logo {
-    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+    content: url('https://i.ibb.co/mRTRWcf/sdadad.png');
   }
   h2 {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
 
   h1 {
     color: #000000;
   }
   .gustom {
-    background-color: #8a8a8a; // Fondo más oscuro en modo oscuro
+    background-color: #ffffff; // Fondo más oscuro en modo oscuro
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.979);
 
   }
 
   .hederletra {
-    background-color: rgb(95, 95, 95);
+    background-color: rgb(255, 255, 255);
+
       }
 
       .imgca {
@@ -194,7 +199,7 @@ ion-content {
     }
   
     .hederletra {
-  background-color: rgb(95, 95, 95);
+  background-color: rgb(0, 0, 0);
     }
   
     h2 {
@@ -204,10 +209,18 @@ ion-content {
    
   
     .gustom {
-      background-color: #8a8a8a; // Fondo más oscuro en modo oscuro
+      background-color: #000000; // Fondo más oscuro en modo oscuro
       box-shadow: 0px 8px 12px rgba(255, 208, 0, 0.979);
   
   
     }
+
+    .Banner ion-tab-button {
+      /* Ajusta el tamaño de cada botón */
+      --color: #ffa500;
+      --color-selected: #001aff;
+      --padding-top: 12px;
+    }
+  
 
   }

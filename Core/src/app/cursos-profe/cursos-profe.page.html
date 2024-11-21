@@ -38,24 +38,27 @@
 </ion-content>
 
 <ion-footer>
-  <ion-tab-bar slot="bottom" class="Banner">
-    <ion-tab-button routerLink="/cursos-profe" tab="schedule">
-      <ion-icon name="albums-outline"></ion-icon>
-      <ion-label>Mis cursos</ion-label>
-    </ion-tab-button>
+  <div class="Banner">
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/cursos-profe" tab="schedule">
+        <ion-icon name="layers"></ion-icon>
+        <ion-label>Mis cursos</ion-label>
+      </ion-tab-button>
   
-    <ion-tab-button routerLink="/nosotros" tab="speakers">
-      <ion-icon name="people-outline"></ion-icon>
-      <ion-label>Nosotros</ion-label>
-    </ion-tab-button>
+      <ion-tab-button routerLink="/nosotros" tab="speakers">
+        <ion-icon name="heart-circle"></ion-icon>
+        <ion-label>Nosotros</ion-label>
+      </ion-tab-button>
   
-    <ion-tab-button routerLink="/crear-curso" tab="map">
-      <ion-icon name="medkit-outline"></ion-icon>
-      <ion-label>Crear Curso</ion-label>
-    </ion-tab-button>
+      <ion-tab-button routerLink="/crear-curso" tab="map">
+        <ion-icon name="duplicate"></ion-icon>
+        <ion-label>Crear Curso</ion-label>
+      </ion-tab-button>
   
-    <ion-tab-button (click)="presentAlert()" tab="about">
-      <ion-icon name="enter-outline"></ion-icon>
-      <ion-label>Cerrar Sesion</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+      <!-- Botón Cerrar Sesión con color rojo -->
+      <ion-tab-button class="cerrar" (click)="presentAlert()" tab="about">
+        <ion-icon name="log-in-sharp"></ion-icon>
+        <ion-label>Cerrar Sesion</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </div>

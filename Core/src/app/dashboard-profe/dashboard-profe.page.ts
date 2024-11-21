@@ -21,29 +21,29 @@ export class DashboardProfePage implements OnInit {
     this.menu.enable(true, 'first');
   }
   // Esta función se invoca cuando el usuario hace clic en el botón "Cerrar sesión"
- async presentAlert() {
-  const alert = await this.alertController.create({
-    header: '¿Quieres Salir?',
-    message: '¡¡Cerraras tu sesion actual!!',
-    buttons: [
-      {
-        text: 'Cancelar',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cierre de sesión cancelado');
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: '¿Quieres Cerrar Sesion?',
+      message: '',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cierre de sesión cancelado');
+          }
+        },
+        {
+          text: 'Si',
+          handler: () => {
+            console.log('Cierre de sesión confirmado');
+            this.navCtrl.navigateRoot('/home'); // Redirige a la página principal (home)
+          }
         }
-      },
-      {
-        text: 'Aceptar',
-        handler: () => {
-          console.log('Cierre de sesión confirmado');
-          this.navCtrl.navigateRoot('/home'); // Redirige a la página principal (home)
-        }
-      }
-    ]
-  });
-
-  await alert.present(); // Presentamos la alerta
-}
+      ]
+    });
+  
+    await alert.present(); // Presentamos la alerta
+  }
 
 }
