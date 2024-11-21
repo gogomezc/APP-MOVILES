@@ -55,7 +55,7 @@ h6 {
 
 .Banner ion-tab-button {
   /* Ajusta el tamaño de cada botón */
-  --color: #FFA500;
+  --color: #000000;
   --color-selected: #001aff;
   --padding-top: 12px;
 }
@@ -83,10 +83,20 @@ ion-header {
   background-color: transparent;
 }
 
+.gustom {
+  background-color: #ffffff; // Fondo más oscuro en modo oscuro
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.979);
 
+
+}
+
+.cerrar {
+
+  color: red;
+}
 
 .logo {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+  content: url('https://i.ibb.co/mRTRWcf/sdadad.png');
   }
 @media (prefers-color-scheme: dark) {
 
@@ -96,5 +106,19 @@ ion-header {
 
   h6 {
     color: white;
+  }
+
+  .Banner ion-tab-button {
+    /* Ajusta el tamaño de cada botón */
+    --color: #ffa500;
+    --color-selected: #001aff;
+    --padding-top: 12px;
+  }
+
+  .gustom {
+    background-color: #000000; // Fondo más oscuro en modo oscuro
+    box-shadow: 0px 8px 12px rgba(255, 196, 0, 0.979);
+    border-radius: 5px;
+  
   }
 }

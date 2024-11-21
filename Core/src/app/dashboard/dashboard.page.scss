@@ -10,7 +10,7 @@ ion-content {
     max-width: 400px;
     height: 100%;
     border-radius: 20px;
-    background-color: rgb(255, 251, 251);
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Sombra */
   }
   
@@ -109,7 +109,7 @@ ion-content {
 
 .Banner ion-tab-button {
   /* Ajusta el tamaño de cada botón */
-  --color: #FFA500;
+  --color: #000000;
   --color-selected: #001aff;
   --padding-top: 12px;
 }
@@ -123,26 +123,38 @@ ion-content {
 }
 
 .logo {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+  content: url('https://i.ibb.co/mRTRWcf/sdadad.png');
 }
 
 
 .imgca {
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(255, 255, 255);
+ 
+}
+
+.gustom {
+  background-color: #ffffff; // Fondo más oscuro en modo oscuro
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.979);
+
+
 }
 
 .hederletra {
-background-color: gray;
+background-color: rgb(255, 255, 255);
 }
 
 h2 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 h1 {
   color: rgb(0, 0, 0);
 }
 
+.cerrar {
+
+  color: red;
+}
 @media (prefers-color-scheme: dark) {
   .logo {
     content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
@@ -180,6 +192,12 @@ background-color: gray;
 
   }
 
+  .Banner ion-tab-button {
+    /* Ajusta el tamaño de cada botón */
+    --color: #ffa500;
+    --color-selected: #001aff;
+    --padding-top: 12px;
+  }
 }
 
 

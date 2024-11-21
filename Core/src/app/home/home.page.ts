@@ -18,7 +18,7 @@ export class HomePage {
   validateInputs() {
     if (!this.usuario || !this.password) {
       // Si alguno de los campos está vacío, se muestra un mensaje de error
-      this.errorMessage = 'Por favor, ingresa tu usuario y contraseña.';
+      this.errorMessage = 'Tienes que ingresa tu usuario y contraseña.';
     } else {
       // Si ambos campos tienen valores, se procede a autenticar
       this.errorMessage = '';  // Limpiar cualquier mensaje de error previo
@@ -62,7 +62,7 @@ export class HomePage {
     (error) => {
       console.error('Error de autenticación:', error);
       // Muestra un mensaje de error si la autenticación falla
-      this.errorMessage = 'Credenciales incorrectas. Intenta de nuevo.';
+      this.errorMessage = 'Usuario o contraseña incorrecta.';
     }
     );
   }

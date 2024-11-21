@@ -25,6 +25,12 @@ ion-content {
     margin-bottom: 20px;
   }
   
+  .cerrar {
+
+    color: red;
+
+  }
+
   .heading img {
     width: 70%;
     height: auto; /* Maintain aspect ratio */
@@ -110,10 +116,11 @@ ion-content {
   
   .Banner ion-tab-button {
     /* Ajusta el tamaño de cada botón */
-    --color: #FFA500;
+    --color: #000000;
     --color-selected: #001aff;
     --padding-top: 12px;
   }
+
   
   .Banner ion-tab-button ion-icon {
     font-size: 24px; /* Aumenta el tamaño del ícono */
@@ -128,7 +135,7 @@ ion-content {
  }
 
  .heading  {
-  content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png');
+  content: url('https://i.ibb.co/mRTRWcf/sdadad.png');
 }
 
 h3{
@@ -136,7 +143,12 @@ h3{
   text-align: center;
   }
 
+.gustomver {
 
+    color: #FFA500;
+    background-color: #272727;
+    border-radius: 5px;
+  }
 
  @media (prefers-color-scheme: dark) {
  
@@ -159,6 +171,12 @@ h3{
   h3{
 
   text-align: center;
+  }
+  .Banner ion-tab-button {
+    /* Ajusta el tamaño de cada botón */
+    --color: #ffa500;
+    --color-selected: #001aff;
+    --padding-top: 12px;
   }
 
  }

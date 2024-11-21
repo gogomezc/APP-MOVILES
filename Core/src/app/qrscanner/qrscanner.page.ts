@@ -94,21 +94,20 @@ export class QrscannerPage implements OnInit {
   }
 
 
-  // Esta función se invoca cuando el usuario hace clic en el botón "Cerrar sesión"
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: '¿Quieres Salir?',
-      message: '¡¡Cerraras tu sesion actual!!',
+      header: '¿Quieres Cerrar Sesion?',
+      message: '',
       buttons: [
         {
-          text: 'Cancelar',
+          text: 'No',
           role: 'cancel',
           handler: () => {
             console.log('Cierre de sesión cancelado');
           }
         },
         {
-          text: 'Aceptar',
+          text: 'Si',
           handler: () => {
             console.log('Cierre de sesión confirmado');
             this.navCtrl.navigateRoot('/home'); // Redirige a la página principal (home)

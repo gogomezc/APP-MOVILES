@@ -17,7 +17,7 @@
     </ion-card-title>
   </ion-card-header>
 
-  <ion-card id="main-card" class="d-flex-center">
+  <ion-card id="main-card" class="gustom">
     <ion-card-content>
         <ion-row>
         <h6>Escanea una imagen de un QR para Inscripcion.</h6>
@@ -43,18 +43,18 @@
 <div class="Banner">
   <ion-tab-bar slot="bottom">
     <ion-tab-button routerLink="/qrscanner" tab="schedule">
-      <ion-icon name="push-outline"></ion-icon>
+      <ion-icon name="qr-code"></ion-icon>
       <ion-label>Escanear Asistencia</ion-label>
     </ion-tab-button>
   
     <ion-tab-button routerLink="/nosotros-alumnos" tab="speakers">
-      <ion-icon name="people-outline"></ion-icon>
+      <ion-icon name="heart-circle"></ion-icon>
       <ion-label>Nosotros</ion-label>
     </ion-tab-button>
   
    
-    <ion-tab-button (click)="presentAlert()" tab="about">
-      <ion-icon name="enter-outline"></ion-icon>
+    <ion-tab-button  class="cerrar" (click)="presentAlert()" tab="about">
+      <ion-icon name="log-in"></ion-icon>
       <ion-label>Cerrar Sesion</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
