@@ -17,4 +17,9 @@ export class ConfigService {
   getApiUrlCursos(): string {
     return this.env.API_URL_CURSOS || '';
   }
+
+  getApiUrlUsuarios(): string {
+    return this.env.API_URL_USUARIOS || '';
+  }
+
 }
