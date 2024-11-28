@@ -1,35 +1,51 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Registro de Usuario</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Código</ion-label>
-        <ion-input [(ngModel)]="codigo" type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">RUN</ion-label>
-        <ion-input [(ngModel)]="run" type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Nombre</ion-label>
-        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Apellido</ion-label>
-        <ion-input [(ngModel)]="apellido" type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Correo</ion-label>
-        <ion-input [(ngModel)]="correo" type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Perfil</ion-label>
-        <ion-input [(ngModel)]="perfil" type="text"></ion-input>
-      </ion-item>
-      <ion-button expand="full" (click)="registrarUsuario()">Registrar</ion-button>
-      <p *ngIf="mensajeError" class="error">{{ mensajeError }}</p>
-    </ion-card-content>
-  </ion-card>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+    <div class="h11">
+      <ion-title>Registro de Usuario</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" [fullscreen]="true">
+  <div class="logo">
+    <img src="" />
+  </div>
+
+
+  <ion-card-content class="custom-card">
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="codigo" label="Código"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="run" label="RUN"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="nombre" label="Nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="apellido" label="Apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="correo" label="Correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"></ion-label>
+      <ion-input labelPlacement="floating" [(ngModel)]="perfil" label="Perfil"></ion-input>
+    </ion-item>
+   
+    <ion-button color="warning" expand="full" (click)="registrarUsuario()" class="crear-curso-button">Registrar</ion-button>
+    <a id="recu"  routerLink="/home"><h2 class="volver">Volver</h2></a>
+    <p *ngIf="mensajeError" class="error">{{ mensajeError }}</p>
+  </ion-card-content>
 </ion-content>

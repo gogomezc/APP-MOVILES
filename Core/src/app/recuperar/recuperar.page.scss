@@ -85,3 +85,81 @@ ion-card {
   color: var(--ion-color-primary, #0088ff); /* Enlace resaltado */
   text-decoration: none;
 }
+
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.heading img {
+  width: 90%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+ion-item {
+  --border-radius: 12px;  /* Puedes cambiar el valor para más o menos redondeo */
+  --border-radius-color: black;
+}
+
+.volver {
+
+  color: #001ec7;
+
+}
+
+.ion-valid.sc-ion-input-md-h {
+  --highlight-color: #0050b9;
+}
+
+.logo {
+  content: url('https://i.ibb.co/mRTRWcf/sdadad.png');
+}
+ 
+
+@media (prefers-color-scheme: dark) {
+
+  .logo {
+    content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
+    
+  }
+
+
+  .inputContainer {
+    width: 100%;
+    margin-bottom: 50px; /* Espacio entre los inputs */
+    position: relative;
+    background-color: #000000;
+  }
+
+  .body {
+    background-color: #000000; /* Color de fondo de respaldo */
+  }
+
+  .heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .heading img {
+    width: 90%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  ion-item {
+    --border-radius: 12px;  /* Puedes cambiar el valor para más o menos redondeo */
+    --border-radius-color: black;
+  }
+
+  .sc-ion-input-md-h {
+    --highlight-color: #ffe600;
+  }
+
+.volver {
+
+  color: #ffd000;
+
+}
+
+}
