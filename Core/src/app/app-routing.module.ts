@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { RegistroPage } from './registro/registro.page';
 const routes: Routes = [
   {
     path: 'home',
@@ -18,7 +18,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },  
+  {
+    path: 'registro',
+    component: RegistroPage,
   },
+
   {
     path: 'nosotros',
     loadChildren: () => import('./nosotros/nosotros.module').then( m => m.NosotrosPageModule)
@@ -55,6 +60,11 @@ const routes: Routes = [
     path: 'nosotros-alumnos',
     loadChildren: () => import('./nosotros-alumnos/nosotros-alumnos.module').then( m => m.NosotrosAlumnosPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+
 
  
 

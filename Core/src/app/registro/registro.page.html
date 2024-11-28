@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro de Usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Código</ion-label>
+        <ion-input [(ngModel)]="codigo" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">RUN</ion-label>
+        <ion-input [(ngModel)]="run" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input [(ngModel)]="apellido" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input [(ngModel)]="correo" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Perfil</ion-label>
+        <ion-input [(ngModel)]="perfil" type="text"></ion-input>
+      </ion-item>
+      <ion-button expand="full" (click)="registrarUsuario()">Registrar</ion-button>
+      <p *ngIf="mensajeError" class="error">{{ mensajeError }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
