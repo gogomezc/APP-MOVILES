@@ -1,0 +1,83 @@
+
+.custom-card {
+    background-color: #ffffff; // Fondo más oscuro en modo oscuro
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.979);
+    margin-top: 80px;
+  }
+
+.h11 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 70%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .custom-card {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .crear-curso-button {
+    margin-top: 20px;
+  }
+  
+  .logo {
+    content: url('https://i.ibb.co/mRTRWcf/sdadad.png');
+  }
+
+  .ion-valid.sc-ion-input-md-h {
+    --highlight-color: #0004d4;
+  }
+
+  .volver {
+
+    color: #0051ff;
+    text-align: center;
+    margin-block-start: 10px;
+    
+  }
+
+@media (prefers-color-scheme: dark) {
+
+    
+
+      .logo {
+        content: url('https://www2.duoc.cl/proveedores/img/logo-duoc.png'); /* Cambia la URL de la imagen para el modo oscuro */
+      }
+    
+      .ion-valid.sc-ion-input-md-h {
+        --highlight-color: #ffee05;
+      }
+
+      .volver {
+
+        color: #ffd000;
+        text-align: center;
+        margin-block-start: 10px;
+        
+      }
+
+      .custom-card {
+        background-color: #030303; // Fondo más oscuro en modo oscuro
+        box-shadow: 0px 4px 12px rgba(255, 208, 0, 0.979);
+        margin-top: 80px;
+      }
+
+      .body {
+        background-color: #030303;
+      }
+
+}
