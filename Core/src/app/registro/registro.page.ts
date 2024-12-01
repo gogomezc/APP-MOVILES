@@ -8,17 +8,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage {
-  codigo = '';
+  codigo = 'presenteprofe';
   run = '';
   nombre = '';
   apellido = '';
   correo = '';
   perfil = '';
   mensajeError = '';
+  
 
   constructor(private registroUsersService: RegistroUsersService) {}
 
   registrarUsuario() {
+    if (!this.validarRUN(this.run)) {
+      this.mensajeError = 'El RUN debe tener el formato XX.XXX.XXX-X.';
+      return;
+    }
+  
+    if (!this.perfil) {
+      this.mensajeError = 'Por favor, selecciona un perfil válido.';
+      return;
+    }
+  
     const usuario = {
       codigo: this.codigo,
       run: this.run,
@@ -27,11 +38,12 @@ export class RegistroPage {
       correo: this.correo,
       perfil: this.perfil,
     };
-
+  
     this.registroUsersService.registrarUsuario(usuario).subscribe(
       (response) => {
         console.log('Usuario registrado:', response);
         alert('Usuario registrado exitosamente.');
+        this.mensajeError = '';
       },
       (error) => {
         console.error('Error al registrar usuario:', error);
@@ -39,4 +51,12 @@ export class RegistroPage {
       }
     );
   }
+  
+
+
+  validarRUN(run: string): boolean {
+    const regex = /^\d{2}\.\d{3}\.\d{3}-[0-9kK]$/; // Formato XX.XXX.XXX-X
+    return regex.test(run);
+  }
+  
 }

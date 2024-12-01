@@ -16,12 +16,21 @@
   <ion-card-content class="custom-card">
     <ion-item>
       <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating" [(ngModel)]="codigo" label="Código"></ion-input>
+      <ion-input 
+        value="presenteprofe" 
+        label="Código" 
+        readonly 
+        [(ngModel)]="codigo">
+      </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating" [(ngModel)]="run" label="RUN"></ion-input>
+      <ion-input 
+        placeholder="XX.XXX.XXX-X" 
+        label="RUN" 
+        [(ngModel)]="run">
+      </ion-input>
     </ion-item>
 
     <ion-item>
@@ -40,8 +49,11 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating"></ion-label>
-      <ion-input labelPlacement="floating" [(ngModel)]="perfil" label="Perfil"></ion-input>
+      <ion-label>Perfil</ion-label>
+      <ion-select [(ngModel)]="perfil">
+        <ion-select-option value="estudiante">Estudiante</ion-select-option>
+        <ion-select-option value="docente">Docente</ion-select-option>
+      </ion-select>
     </ion-item>
    
     <ion-button color="warning" expand="full" (click)="registrarUsuario()" class="crear-curso-button">Registrar</ion-button>
